@@ -1,0 +1,231 @@
+body{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4,auto);
+
+    grid-template-areas: "header header header header"
+                        "publicidad publicidad publicidad publicidad"
+                        "carousel carousel carousel carousel"
+                        "imagen imagen imagen2 imagen2"
+                        "conocenos conocenos conocenos conocenos"
+                        "titleD titleD titleD titleD"
+                        "datos datos2 dat dat2"
+                        "footer footer footer footer"
+                        ; 
+}
+
+.header{
+    grid-area: header; 
+}
+.publicidad{
+    background-image: url(../img/banner1.jpeg);
+    grid-area: publicidad;
+    padding: 100px 80px 100px 80px;
+}
+.palabras{
+    float: right;
+    color: white;
+    font-size: 25px;
+}
+.carousel{
+    grid-area: carousel;
+}
+.imagen,
+.imagen2 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 300px;
+}
+.imagen{
+    grid-area: imagen;    
+}
+.imagen2{
+    grid-area: imagen2;
+}
+.img{
+    background-image: url(../img/grano/1.jpeg);
+    width: 80%;
+    height: 90%;
+}
+div #info{
+    background-color: rgba(171, 117, 91,0.6);
+    opacity: 0;
+    overflow: hidden;
+    height: 100%;
+    color: white;
+    font-size: 16px;
+}
+div #info:hover{
+    opacity: 1;
+    padding-top: 50px;
+}
+
+.conocenos{
+    background-image: url(../img/cafe4.jpg);
+    grid-area: conocenos;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.conocenos .conoce{
+    width: 500px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: white;
+    
+}
+.conoce p{
+    font-size: 45px;
+}
+.titleD{
+    grid-area: titleD;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+.datos{
+    grid-area: datos;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 280px;
+    
+}
+.datos2{
+    grid-area: datos2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 280px;
+    
+}
+.dat{
+    grid-area: dat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 280px;
+    
+}
+.dat2{
+    grid-area: dat2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 280px;
+    
+}
+.dat .card{
+    margin: 10px;
+    background-image: url(../img/cafe5.JPG);
+    background-size: 300px;
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 90%;
+    
+}
+.datos .card{
+    margin: 10px;
+    background-image: url(../img/cafe5.JPG);
+    background-size: 300px;
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 90%;
+}
+.dat2 .card{
+    margin: 10px;
+    background-image: url(../img/cafe5.JPG);
+    background-size: 300px;
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 90%;
+    
+}
+.datos2 .card{
+    margin: 10px;
+    background-image: url(../img/cafe5.JPG);
+    background-size: 300px;
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 90%;
+    
+}
+
+.card .info{
+    background-color: rgba(171, 117, 91,0.6);
+    opacity: 0;
+    overflow: hidden;
+    height: 100%;
+    color: white;
+    font-size: 16px;
+    
+}
+.card .info:hover{
+    opacity: 1;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.card .info p{
+    margin:0px 10px 0px 10px;
+}
+.footer{
+    grid-area: footer;
+    background-image: url(../img/footer.png);
+    height: 200px;
+}
+
+
+@media screen and (max-width:915px){
+    body{
+        grid-template-areas: "header header header header"
+                           "publicidad publicidad publicidad publicidad"
+                            "carousel carousel carousel carousel"
+                            "imagen imagen imagen imagen"
+                            "imagen2 imagen2 imagen2 imagen2"
+                            "conocenos conocenos conocenos conocenos"
+                            "titleD titleD titleD titleD"
+                            "datos datos datos2 datos2"
+                            "dat dat dat2 dat2"
+                            "footer footer footer footer"; 
+    }
+}
+
+@media screen and (max-width:768px){
+    body{
+        grid-template-areas: "header header header header"
+                           "publicidad publicidad publicidad publicidad"
+                            "carousel carousel carousel carousel"
+                            "imagen imagen imagen imagen"
+                            "imagen2 imagen2 imagen2 imagen2"
+                            "conocenos conocenos conocenos conocenos"
+                            "titleD titleD titleD titleD"
+                            "datos datos datos2 datos2"
+                            "dat dat dat2 dat2"
+                            "footer footer footer footer"; 
+    }
+}
+
+@media screen and (max-width:675px){
+    body{
+        grid-template-areas: "header header header header"
+                           "publicidad publicidad publicidad publicidad"
+                            "carousel carousel carousel carousel"
+                            "imagen imagen imagen imagen"
+                            "imagen2 imagen2 imagen2 imagen2"
+                            "conocenos conocenos conocenos conocenos"
+                            "titleD titleD titleD titleD"
+                            "datos datos datos datos"
+                            "datos2 datos2 datos2 datos2"
+                            "dat dat dat dat"
+                            "dat2 dat2 dat2 dat2"
+                            "footer footer footer footer"; 
+    }
+}

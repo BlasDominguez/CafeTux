@@ -1,0 +1,94 @@
+body{
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4,auto);
+
+    grid-template-areas: "header header header"
+                        "detalles mensajes mensajes"
+                        "footer footer footer"
+                        ; 
+}
+.header{
+    grid-area: header;
+}
+div ul li,
+div ul li a {
+    text-decoration: none;
+    color: white;
+    width: 100px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div ul li:hover,
+div ul li a:hover{
+    background: rgb(105, 31, 31);
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid white;
+}
+.mensajes{
+    grid-area: mensajes;
+}
+.detalles{
+    grid-area: detalles;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.detalle{
+    width: 70%;
+    margin: 80px 0px;
+}
+.detalle a{
+    text-decoration: none;
+    color: brown;
+}
+.mensaje{
+    width: 70%;
+    float: left;
+    margin: 80px;
+}
+#formGroupExampleInput4{
+    height: 100px;
+}
+.banner{
+    grid-area: banner;
+
+}
+.footer{
+    grid-area: footer;
+    background-image: url(../img/footer.png);
+    height: 200px;
+}
+
+
+
+@media screen and (max-width:760px){
+    body{
+        grid-template-areas: "header header header"
+                            "detalles detalles detalles"
+                            "mensajes mensajes mensajes"
+                            "footer footer footer";
+    }
+    
+    .mensaje{
+        margin: 50px;
+    }
+}
+
+@media screen and (max-width:950px){
+    body{
+        grid-template-areas: "header header header"
+                            "detalles detalles detalles"
+                            "mensajes mensajes mensajes"
+                            "footer footer footer"
+                            ;
+    }
+    .mensaje{
+        margin: 50px;
+    }
+}

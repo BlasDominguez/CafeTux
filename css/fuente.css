@@ -1,0 +1,7 @@
+@font-face {
+    font-family: cafetux;
+    src: url(../fuente/LouisGeorgeCafe.ttf);
+}
+body{
+    font-family: cafetux;
+}

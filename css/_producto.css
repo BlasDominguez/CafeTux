@@ -1,0 +1,79 @@
+body{
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,auto);
+
+    grid-template-areas: "header header header"
+                        "producto producto producto"
+                        "footer footer footer"
+                        ; 
+}
+.header{
+    grid-area: header;
+    
+}
+
+div ul li,
+div ul li a {
+    text-decoration: none;
+    color: white;
+    width: 100px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div ul li:hover,
+div ul li a:hover{
+    background: rgb(105, 31, 31);
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid white;
+}
+.producto{
+    grid-area: producto;
+    margin: 50px;
+}
+.producto .titulo{
+    margin: 30px;
+}
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+
+}
+.card{
+    margin: 10px;
+}
+.card .imagen img{
+    transition: 1s;
+}
+.card .imagen{
+    
+    overflow: hidden;
+}
+.card img:hover{
+    transform: scale(1.5);
+}
+.footer{
+    grid-area: footer;
+    background-image: url(../img/footer.png);
+    height: 200px;
+}
+
+@media screen and (max-width: 770px){
+    .productos{
+        
+        margin: 10px;
+    
+    }
+    .card{
+        margin: 3px;
+        width: 40%;
+    }
+}
+

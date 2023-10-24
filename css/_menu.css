@@ -1,0 +1,137 @@
+body{
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4,auto);
+
+    grid-template-areas: "header header header"
+                        "carousel carousel carousel"
+                        "titulo titulo titulo"
+                        "contenedor contenedor contenedor"
+                        "ofertas ofertas ofertas"
+                        "footer footer footer"
+                        ; 
+}
+.header{
+    grid-area: header;
+}
+div ul li,
+div ul li a {
+    text-decoration: none;
+    color: white;
+    width: 100px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div ul li:hover,
+div ul li a:hover{
+    background: rgb(105, 31, 31);
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid white;
+}
+    
+
+
+.carousel{
+    grid-area: carousel;
+}
+.titulo{
+    grid-area: titulo;
+    margin: 50px;
+    font-size: 35px;
+}
+.contenedor{
+    grid-area: contenedor;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor .card{
+    width: 15rem;
+    
+}
+.espacio{
+    height: 100px;
+}
+
+.ofertas{
+    grid-area: ofertas;
+    height: auto;
+    width: 90%;
+    margin: auto;
+    padding: 170px 0px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,auto);
+
+    grid-template-areas:"h1 h1 h1"
+                        "oferta1 oferta1 oferta1"
+                        "oferta2 oferta2 oferta2"
+    ;
+}
+.h1{
+    grid-area: h1;
+    margin: 50px;
+}
+.oferta1{
+    grid-area: oferta1;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,auto);
+    grid-template-areas: "card1 card2 card3"
+                        "card4 card4 card4"
+    ;
+}
+.oferta2{
+    grid-area: oferta2;
+}
+.oferta2 .card4 img{
+    height: 300px;
+}
+
+.card1{
+    grid-area: card1;
+}
+.card2{
+    grid-area: card2;
+}
+.card3{
+    grid-area: card3;
+}
+.card4{
+    grid-area: card4;
+}
+.footer{
+    grid-area: footer;
+    height: 200px;
+    background-image: url(../img/footer.png);
+}
+
+@media screen and (max-width:770px){
+    .contenedor .card{
+        width: 12rem;
+    }
+}
+
+@media screen and (max-width:450px){
+    .contenedor .card{
+        width: 10rem;
+        font-size: 10px;
+    }
+    .oferta1{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2,auto);
+        grid-template-areas: "card1 card2"
+                            "card3 card3"
+        ;
+    }
+    
+}

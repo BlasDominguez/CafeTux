@@ -1,0 +1,32 @@
+body{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,auto);
+
+    grid-template-areas: "header header header"
+                        "container container container"
+                        ; 
+}
+.header{
+    grid-area: header;
+}
+.container{
+    grid-area: container;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card .card-header{
+    background: brown;
+    color: white;
+}
+.card .card-header a{
+    float: right;
+    border-radius: 50%;
+    width: 25px;
+    text-decoration: none;
+    color: black;
+    background: red;
+}
